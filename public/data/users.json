@@ -1,0 +1,38 @@
+[
+    {
+    "id": 1,
+    "name": "Khalid Ali",
+    "email": "manager@example.com",
+    "password": "2354323",
+    "role": "Manager",
+    "photo": "https://i.postimg.cc/vTyXfKDm/What-are-the-Saudi-traditional-dress.png",
+    "phone": "123-456-7890"
+  },
+  {
+    "id": 2,
+    "name": "Fatima Al-Zahra",
+    "email": "hr@example.com",
+    "password": "7891234",
+    "role": "HR",
+    "photo": "https://i.postimg.cc/vTyXfKDm/What-are-the-Saudi-traditional-dress.png",
+    "phone": "123-456-7891"
+  },
+  {
+    "id": 3,
+    "name": "Omar Abdullah",
+    "email": "accountant@example.com",
+    "password": "5674321",
+    "role": "Accountant",
+    "photo": "https://i.postimg.cc/vTyXfKDm/What-are-the-Saudi-traditional-dress.png",
+    "phone": "123-456-7892"
+  },
+  {
+    "id": 4,
+    "name": "Sarah Al-Mansouri",
+    "email": "sales@example.com",
+    "password": "9876543",
+    "role": "Sales",
+    "photo": "https://i.postimg.cc/vTyXfKDm/What-are-the-Saudi-traditional-dress.png",
+    "phone": "123-456-7893"
+  }
+]

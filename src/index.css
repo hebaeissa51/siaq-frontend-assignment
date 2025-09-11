@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .centered {
+    @apply flex items-center justify-center;
+  }
+
+  .font-family {
+    font-family: "Rubik", sans-serif !important;
+  }
+
+  .custom-hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.133) 0px 5px 15px;
+  }
+
+  .btn-shadow {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+  }
+
+  .card-shadow {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .transition-3s {
+    @apply transition-all duration-[300ms] ease-in-out
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply w-full px-4;
+  }
+
+  .btn {
+    @apply font-normal leading-normal capitalize rounded-[4px] transition-3s
+  }
+
+  .btn-primary {
+    @apply bg-primary border-primary text-white hover:text-primary hover:bg-emerald-50
+  }
+
+  .btn-danger {
+    @apply bg-danger border-danger text-white whitespace-nowrap 
+  }
+
+  .btn-export {
+    @apply flex items-center justify-center w-[40px] h-[40px] rounded-[20%] text-white text-[24px] hover:custom-hover transition-all duration-[800ms] ease-in-out
+  }
+
+  .input {
+    @apply flex items-center h-14 w-full border border-[#cfcfcf] placeholder-[#bababa] placeholder:font-light bg-transparent rounded-[5px] text-base leading-[21px] text-black px-3 py-1.5 hover:border-[#000] focus:placeholder-transparent focus:outline-none focus:border-[#86b7fe] focus:border-[2px]
+  }
+
+  .error-msg {
+    @apply text-[12px] text-[#d32f2f] font-normal text-start block mx-3 mt-1
+  }
+
+  .sm {
+    @apply max-w-[65px] min-w-[65px] overflow-x-hidden
+  }
+
+  .activeBG {
+    @apply !block
+  }
+
+  .opened {
+    @apply !left-0
+  }
+
+  .positioning {
+    @apply !left-[32px]
+  }
+
+  .sidebar-toggle {
+    @apply m-0 bg-primary text-white h-[25px] w-[25px] rounded-[5px] flex justify-center items-center top-[90px] left-[218px]
+  }
+
+  .nav-link {
+    @apply w-full h-full block py-[10px] pl-[15px] rounded-[5px] no-underline box-border capitalize text-[#343a40] font-normal text-[16px] leading-[16.94px] cursor-pointer
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  position: relative;
+  background-color: #f4f5fa;
+  color: #211D1E;
+  overflow-x: hidden;
+  direction: ltr;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+}
+
+.sm a {
+  border: none;
+  padding: 10px 15px;
+}
+
+.sm .nav-link span {
+  display: none !important;
+}
+
+.sm .nav-link i {
+  margin: 0;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.sm button.nav-link {
+  width: 35px;
+}
