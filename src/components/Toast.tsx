@@ -7,7 +7,7 @@ type ToastTypes = {
 
 const Toast = ({ isVisible, status, detail, hideToast }: ToastTypes) => {
     return (
-        <div className={`fixed top-[20px] right-[20px] max-w-[25rem] w-full flex justify-between items-start rounded-[6px] p-4 border-l-[6px] backdrop-blur-[10px] shadow-[0_2px_12px_0_rgba(0,0,0,0.1)] transition-opacity duration-[0.3s] ${isVisible ? 'opacity-100 z-[2000]' : 'opacity-0 bg-transparent z-[-20]'}
+        <div className={`fixed top-[20px] right-[20px] max-w-[20rem] sm:max-w-[25rem] w-full flex justify-between items-start rounded-[6px] p-4 border-l-[6px] backdrop-blur-[10px] shadow-[0_2px_12px_0_rgba(0,0,0,0.1)] transition-opacity duration-[0.3s] ${isVisible ? 'opacity-100 z-[2000]' : 'opacity-0 bg-transparent z-[-20]'}
             ${status === "success" ? "bg-[#edf7ed] text-[#2e7d32] border-[#2e7d32]" : "bg-[#fdeded] text-[#5f2120] border-[#d32f2f]"}
         `}>
             <figure className="flex">
