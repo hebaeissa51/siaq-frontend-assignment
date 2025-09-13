@@ -1,69 +1,92 @@
-# React + TypeScript + Vite
+# 🚀 SIAQ Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **Role-Based Dashboard Application** built with **React + TypeScript + Vite**.
+The project simulates a role-based access system where pages and actions depend on the user’s role.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- 🔑 **Authentication** with JSON files (users.json & clients.json).
+- 🧭 **Role-Based Navigation** with protected routes.
+- 📊 **Dashboard** shows dynamic statistics depending on the user role.
+- 👥 **Users Management**:
+  - Manager → view only
+  - HR → can delete users
+- 🏢 **Clients Management**:
+  - Manager & Sales → can view and add new clients
+- 📝 **Profile Editing**: update user `name` and `phone`.
+- 🚫 **Not Authorized Page** for restricted routes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- ⚡ **Vite** – build tool
+- ⚛️ **React 18** – UI library
+- 🟦 **TypeScript** – type safety
+- 🛠️ **Redux Toolkit** – global state management
+- 🌐 **React Router** – navigation
+- 🎨 **Tailwind CSS** – styling
+- 📋 **React Hook Form** – form handling
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+```
+src/
+ ├── assets/         # Static assets (images)
+ ├── components/     # Reusable UI components
+ ├── constants/      # Constant values
+ ├── context/        # Context providers (Auth, etc.)
+ ├── hooks/          # Custom hooks
+ ├── layout/         # Layout components (Sidebar, Header, Layout)
+ ├── modules/        # Feature-based modules
+ ├── pages/          # Pages (Login, Dashboard, Users, Clients, UserProfile, ErrorPage)
+ ├── routes/         # Routing setup
+ ├── store/          # Redux slices & store
+ ├── types/          # TypeScript types
+ ├── utils/          # Utility functions
+ ├── App.tsx
+ ├── index.css
+ └── main.tsx
+public/
+ └── data/           # Dummy JSON data (users.json, clients.json)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/hebaeissa51/siaq-frontend-assignment
+   cd siaq-frontend-assignment
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open in browser:
+   ```
+   http://localhost:5173
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🔑 Example Credentials
+From `users.json`:
+- **Manager** → `manager@example.com` / `2354323`
+- **HR** → `hr@example.com` / `7891234`
+- **Sales** → `sales@example.com` / `9876543`
+
+---
+
+## 📎 Links
+- 📂 GitHub Repo: https://github.com/hebaeissa51/siaq-frontend-assignment
+- 🌐 Live Demo: https://zingy-chebakia-3cea03.netlify.app/
+
+---
+
+*Made with love using React, TypeScript and Vite.*
